@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#090d16">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Ashish Maheshwari">
     <meta name="description" content="Ashish Maheshwari builds rapid Flutter apps, web interfaces, AI automation workflows, and conversion-focused digital solutions with lightning-fast 24-48 hour sprint delivery.">
     <meta name="keywords" content="Ashish Maheshwari, full stack developer, Flutter developer, AI automation expert, Python automation, web app developer, mobile app bug fixes, rapid sprint development, WhatsApp-based project delivery, custom landing pages">
+    <link rel="canonical" href="https://flutterashu.github.io/">
+    
+    <!-- Open Graph Metadata -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ashish Maheshwari">
     <meta property="og:title" content="Ashish Maheshwari | Full-Stack & AI Automation Sprints">
@@ -17,17 +20,15 @@
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/84681789?v=4">
     <meta property="og:image:alt" content="Ashish Maheshwari portfolio and services landing page">
     <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Metadata -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@flutterashu">
     <meta name="twitter:creator" content="@flutterashu">
     <meta name="twitter:title" content="Ashish Maheshwari | Full-Stack & AI Automation Sprints">
     <meta name="twitter:description" content="Rapid Flutter, web, and AI automation sprints delivered in 24-48 hours. From mobile bug fixes to custom AI workflows and landing pages.">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/84681789?v=4">
-    <meta name="twitter:image:alt" content="Ashish Maheshwari profile and portfolio preview">
-    <link rel="canonical" href="https://flutterashu.github.io/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <title>Ashish Maheshwari | Full-Stack & AI Automation Sprints</title>
     
     <!-- Tailwind CSS -->
@@ -40,11 +41,9 @@
                     colors: {
                         brand: {
                             50: '#f0fdf4',
-                            400: '#34d399',
                             500: '#10b981',
                             600: '#059669',
                             700: '#047857',
-                            800: '#065f46',
                             900: '#064e3b',
                             accent: '#3b82f6'
                         }
@@ -58,6 +57,11 @@
         }
     </script>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -68,6 +72,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -99,11 +104,11 @@
       "image": "https://avatars.githubusercontent.com/u/84681789?v=4"
     }
     </script>
-    
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #070a12;
+            background-color: #090d16;
             color: #f3f4f6;
             overflow-x: hidden;
         }
@@ -120,7 +125,7 @@
             pointer-events: none;
         }
         .glass-card {
-            background: rgba(15, 23, 42, 0.75);
+            background: rgba(17, 24, 39, 0.7);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -130,8 +135,8 @@
         }
         .glass-card-hover:hover {
             border-color: rgba(16, 185, 129, 0.4);
-            transform: translateY(-5px);
-            box-shadow: 0 16px 35px -10px rgba(16, 185, 129, 0.18);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.15);
         }
         .gradient-text {
             background: linear-gradient(135deg, #10b981 0%, #3b82f6 50%, #a855f7 100%);
@@ -139,16 +144,25 @@
             -webkit-text-fill-color: transparent;
         }
         .gradient-glow {
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-out, opacity 0.3s ease;
+            opacity: 0;
+        }
+        .accordion-content.open {
+            opacity: 1;
         }
     </style>
 </head>
-<body class="relative text-slate-100 antialiased selection:bg-brand-500 selection:text-white min-h-screen">
+<body class="relative text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
 
-    <!-- Background 3D Canvas -->
+    <!-- 3D Canvas Background -->
     <canvas id="bg-canvas"></canvas>
 
-    <!-- Navigation Header -->
+    <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
@@ -157,7 +171,7 @@
                 </div>
                 <div>
                     <span class="font-bold text-lg tracking-tight block">Ashish Maheshwari</span>
-                    <span class="text-xs text-brand-400 font-mono flex items-center gap-1.5">
+                    <span class="text-xs text-brand-500 font-mono flex items-center gap-1.5">
                         <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
                         Available for 24h Sprints
                     </span>
@@ -165,159 +179,344 @@
             </a>
 
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#services" class="hover:text-brand-400 transition-colors">Services</a>
-                <a href="#calculator" class="hover:text-brand-400 transition-colors">Instant Estimate</a>
-                <a href="#process" class="hover:text-brand-400 transition-colors">Process</a>
+                <a href="#services" class="hover:text-brand-500 transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-brand-500 transition-colors">Portfolio</a>
+                <a href="#calculator" class="hover:text-brand-500 transition-colors">Instant Estimate</a>
+                <a href="#process" class="hover:text-brand-500 transition-colors">Process</a>
+                <a href="#faq" class="hover:text-brand-500 transition-colors">FAQ</a>
             </div>
 
             <div class="flex items-center gap-3">
-                <a href="https://wa.me/919667146563?text=Hi%20Ashish,%20I%20saw%20your%20site%20and%20want%20to%20discuss%20a%20project." target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105">
-                    <i class="fab fa-whatsapp text-lg"></i>
-                    <span>WhatsApp Direct</span>
+                <a href="https://wa.me/919667146563?text=Hi%20Ashish,%20I%20saw%20your%20site%20and%20want%20to%20discuss%20a%20project." target="_blank" class="glass-card hover:bg-slate-800 text-slate-200 px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2 border border-slate-700 transition-all">
+                    <i class="fab fa-whatsapp text-emerald-400 text-lg"></i>
+                    <span class="hidden sm:inline">WhatsApp Direct</span>
+                </a>
+                <a href="#calculator" class="bg-gradient-to-r from-brand-600 to-emerald-500 hover:from-brand-500 hover:to-emerald-400 text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow-lg shadow-emerald-900/30 hover:scale-105 transition-all">
+                    Get Quote
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content Body -->
-    <main class="relative z-10 pt-32 pb-20">
+    <main class="relative z-10 pt-28">
         <!-- Hero Section -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 grid lg:grid-cols-12 gap-12 items-center">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-7 space-y-8 hero-text">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-brand-500/30 text-brand-400 text-xs font-mono">
                     <i class="fas fa-bolt text-brand-500"></i>
-                    <span>24–48 HOUR TECHNICAL SPRINT DELIVERY</span>
+                    <span>FAST 24–48 HOUR EXECUTION GUARANTEE</span>
                 </div>
                 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                    Flutter, Web & <br>
+                    Full-Stack Apps & <br>
                     <span class="gradient-text">AI Automation Sprints</span>
                 </h1>
                 
                 <p class="text-lg text-slate-300 max-w-2xl leading-relaxed">
-                    Stop waiting weeks for agency turnarounds. I deliver full-stack web fixes, Flutter mobile updates, custom Python AI workflows, and automation pipelines in <strong class="text-emerald-400">24 to 48 hours</strong>.
+                    Stop waiting weeks for bloated agencies. I deliver full-stack Flutter & React web bug fixes, custom Python & Gemini AI automation scripts, and short-form video pipelines in <strong class="text-emerald-400">24 to 48 hours</strong>.
                 </p>
 
                 <div class="flex flex-wrap items-center gap-4 pt-2">
-                    <a href="https://wa.me/919667146563?text=Hi%20Ashish,%20I%20need%20an%20urgent%20dev%20sprint." target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-7 py-4 rounded-xl text-base flex items-center gap-3 shadow-xl shadow-emerald-500/20 hover:scale-105 transition-all">
+                    <a href="https://wa.me/919667146563?text=Hi%20Ashish,%20I%20need%20an%20urgent%20dev/automation%20sprint." target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-7 py-4 rounded-xl text-base flex items-center gap-3 shadow-xl shadow-emerald-500/20 hover:scale-105 transition-all">
                         <i class="fab fa-whatsapp text-2xl"></i>
-                        <span>Start WhatsApp Chat</span>
+                        <span>Start WhatsApp Chat Now</span>
                     </a>
                     <a href="#calculator" class="glass-card hover:bg-slate-800/80 text-white font-semibold px-6 py-4 rounded-xl text-base border border-slate-700 flex items-center gap-2 transition-all">
-                        <span>Instant Calculator</span>
+                        <span>Calculate Cost</span>
                         <i class="fas fa-calculator text-slate-400"></i>
                     </a>
                 </div>
+
+                <!-- Trust Badges -->
+                <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800/80 text-slate-400 text-xs font-mono">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-shield-halved text-emerald-500 text-base"></i>
+                        <span>100% Guaranteed Delivery</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-code text-blue-400 text-base"></i>
+                        <span>Clean Code & Docs</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-clock text-purple-400 text-base"></i>
+                        <span>Same-Day Response</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Terminal Hero Box -->
+            <!-- Hero Feature Card -->
             <div class="lg:col-span-5">
-                <div class="glass-card rounded-2xl p-6 border border-slate-700/80 shadow-2xl relative overflow-hidden">
-                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
-                        <div class="flex items-center gap-2">
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-700/80 shadow-2xl relative overflow-hidden group">
+                    <div class="absolute -top-12 -right-12 w-40 h-40 bg-brand-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                        <div class="flex items-center gap-3">
                             <div class="w-3 h-3 rounded-full bg-red-500"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500"></div>
                         </div>
-                        <span class="text-xs font-mono text-slate-400">ashish@sprint-terminal:~$</span>
+                        <span class="text-xs font-mono text-slate-400">Terminal // Sprint Status</span>
                     </div>
 
-                    <div class="space-y-3 font-mono text-xs leading-relaxed">
-                        <div class="text-slate-400"><span class="text-emerald-400">$</span> run_sprint --stack="Flutter, Python, React"</div>
-                        <div class="p-3 bg-slate-950/80 rounded-lg border border-slate-800 space-y-1.5">
-                            <div class="text-emerald-400">[✓] Flutter / React UI Inspection Ready</div>
-                            <div class="text-emerald-400">[✓] Python & Gemini AI Pipeline Online</div>
-                            <div class="text-emerald-400">[✓] Fast Deployment Pipeline Active</div>
-                            <div class="text-blue-400 animate-pulse">[>] Ready for 24-48h sprint request...</div>
+                    <div class="space-y-4 font-mono text-sm">
+                        <div class="text-slate-400">
+                            <span class="text-emerald-400">$</span> init_sprint --type=<span class="text-yellow-400">"rapid-fix"</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-lg border border-slate-800 text-xs text-slate-300 space-y-1">
+                            <div class="text-emerald-400 font-semibold">[✓] Flutter / React Audit</div>
+                            <div class="text-emerald-400 font-semibold">[✓] Gemini AI & Python Pipeline Configured</div>
+                            <div class="text-emerald-400 font-semibold">[✓] Tailwind CSS Layout Fix</div>
+                            <div class="text-blue-400 animate-pulse">[>] Deploying to production in 24h...</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-brand-900/30 border border-brand-500/30 flex items-center justify-between">
+                            <div>
+                                <div class="text-xs text-slate-400">Typical Turnaround</div>
+                                <div class="text-lg font-bold text-emerald-400">24 – 48 Hours</div>
+                            </div>
+                            <a href="#services" class="text-xs bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold px-3 py-2 rounded-lg transition-colors">
+                                View Specs
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-                <h2 class="text-xs font-mono text-brand-400 tracking-wider uppercase font-semibold">Micro-Offers & Services</h2>
-                <p class="text-3xl font-extrabold">Fast High-Impact Deliverables</p>
+        <!-- Core Micro-Services -->
+        <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-mono text-brand-500 tracking-wider uppercase font-semibold">Micro-Offers & Sprints</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold">High-Impact Deliverables Built For Speed</p>
+                <p class="text-slate-400 text-base">Select a pre-packaged sprint or request a custom solution built specifically for your workflow.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-2">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-8 border border-slate-800 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <h3 class="text-lg font-bold">AI & Python Automation</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            Custom Python scripts, Gemini API workflows, web scrapers, and automated video/metadata pipelines.
+                        <h3 class="text-xl font-bold">AI & Python Automation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Custom Python automation scripts, Gemini API workflows, data scrapers, and automated social metadata generation pipelines.
                         </p>
+                        <ul class="text-xs text-slate-300 space-y-2 font-mono pt-2">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Gemini / OpenAI API Integrations</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Automated Metadata & Caption Bots</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Flask / Cloud Run Script Deployment</li>
+                        </ul>
                     </div>
-                    <div class="pt-4 mt-6 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
-                        <span class="text-slate-400">From $75 / ₹6,000</span>
-                        <a href="https://wa.me/919667146563?text=Hi%20Ashish,%20I%20am%20interested%20in%20AI%20and%20Python%20Automation." target="_blank" class="text-emerald-400 font-semibold hover:underline">Inquire →</a>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-slate-400 font-mono">From $75 / ₹6,000</span>
+                        <button onclick="quickQuote('AI & Python Automation')" class="text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1">
+                            Get Quote <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl mb-2">
-                            <i class="fas fa-mobile-alt"></i>
+                <!-- Service 2 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-8 border border-slate-800 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl mb-4">
+                            <i class="fas fa-code"></i>
                         </div>
-                        <h3 class="text-lg font-bold">Flutter & Web Bug Sprint</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            Rapid fixes for Flutter apps, React, Vite, Tailwind CSS, and state management or layout bugs.
+                        <h3 class="text-xl font-bold">24-Hour Web & Bug Sprint</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Rapid troubleshooting for React, Tailwind CSS, Vite, Node.js, and Flutter. Responsive UI fixes and API integration errors resolved fast.
                         </p>
+                        <ul class="text-xs text-slate-300 space-y-2 font-mono pt-2">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> Layout & Mobile Responsiveness Fixes</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> State & API Debugging</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> Clean Code & Screen Recording Proof</li>
+                        </ul>
                     </div>
-                    <div class="pt-4 mt-6 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
-                        <span class="text-slate-400">From $50 / ₹4,000</span>
-                        <a href="https://wa.me/919667146563?text=Hi%20Ashish,%20I%20need%20help%20with%20a%20Flutter/Web%20bug%20fix." target="_blank" class="text-blue-400 font-semibold hover:underline">Inquire →</a>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-slate-400 font-mono">From $50 / ₹4,000</span>
+                        <button onclick="quickQuote('Web & Bug Sprint')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                            Get Quote <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-2">
+                <!-- Service 3 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-8 border border-slate-800 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-4">
                             <i class="fas fa-video"></i>
                         </div>
-                        <h3 class="text-lg font-bold">Short-Form Content Engine</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            Repurposing long-form content into engaging 9:16 Shorts/Reels with dynamic captions and custom assets.
+                        <h3 class="text-xl font-bold">Short-Form Video Engine</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Repurposing long-form content into high-converting 9:16 Shorts, Reels, and TikToks with dynamic captions and custom 9:16 thumbnails.
                         </p>
+                        <ul class="text-xs text-slate-300 space-y-2 font-mono pt-2">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-purple-400"></i> Hook-Driven Short Cuts</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-purple-400"></i> Auto Captions & Visual Assets</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-purple-400"></i> Batch Editing Packages</li>
+                        </ul>
                     </div>
-                    <div class="pt-4 mt-6 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
-                        <span class="text-slate-400">From $60 / ₹5,000</span>
-                        <a href="https://wa.me/919667146563?text=Hi%20Ashish,%20I%20need%20help%20with%20Short-Form%20video%20editing." target="_blank" class="text-purple-400 font-semibold hover:underline">Inquire →</a>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-slate-400 font-mono">From $60 / ₹5,000</span>
+                        <button onclick="quickQuote('Short-Form Video Engine')" class="text-xs font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-1">
+                            Get Quote <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Calculator Section -->
-        <section id="calculator" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="glass-card rounded-3xl p-8 border border-slate-700/80 shadow-2xl">
-                <div class="text-center mb-8">
-                    <h2 class="text-2xl font-bold">Instant Estimate Calculator</h2>
-                    <p class="text-xs text-slate-400 mt-1">Select options to calculate costs and generate a direct WhatsApp quote message.</p>
+        <!-- Featured Portfolio & Work Showcase -->
+        <section id="portfolio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <h2 class="text-xs font-mono text-brand-500 tracking-wider uppercase font-semibold">Featured Work & Case Studies</h2>
+                <p class="text-3xl font-extrabold">Recent Sprint Successes</p>
+                <p class="text-slate-400 text-sm">Explore interactive web projects, mobile games, and AI automation engines delivered for clients.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex justify-center flex-wrap gap-3 mb-10 text-xs font-mono">
+                <button onclick="filterPortfolio('all')" class="port-tab active px-4 py-2 rounded-xl glass-card border border-brand-500 text-emerald-400 font-semibold transition-all">All Projects</button>
+                <button onclick="filterPortfolio('ai')" class="port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all">AI & Python</button>
+                <button onclick="filterPortfolio('game')" class="port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all">Flutter & Mobile</button>
+                <button onclick="filterPortfolio('web')" class="port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all">Web Sprints</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Card 1 -->
+                <div class="port-item ai glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">Gemini AI / Python</span>
+                            <span class="text-xs text-slate-500 font-mono">24h Sprint</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100">Automated Shorts Topic & Metadata Generator</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Python automation pipeline querying the Gemini API to analyze educational trends, auto-generate titles, descriptions, and 9:16 thumbnail specs.
+                        </p>
+                    </div>
+                    <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
+                        <span class="text-slate-400"><i class="fab fa-python text-yellow-400 mr-1.5"></i>Python + Gemini API</span>
+                        <a href="https://github.com/flutterashu" target="_blank" class="text-brand-400 hover:underline">View Code →</a>
+                    </div>
                 </div>
 
-                <div class="space-y-6">
-                    <div>
-                        <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Select Service</label>
-                        <select id="calc-service" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-slate-100 focus:outline-none focus:border-brand-500">
-                            <option value="50">Web / Layout / Flutter Bug Fix ($50 / ₹4,000)</option>
-                            <option value="85">Python / Gemini AI Script ($85 / ₹7,000)</option>
-                            <option value="65">Short-Form Video Batch ($65 / ₹5,000)</option>
-                            <option value="180">Full Landing Page / Mobile App Screen ($180 / ₹15,000)</option>
-                        </select>
+                <!-- Portfolio Card 2 -->
+                <div class="port-item game glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">Flutter Game Engine</span>
+                            <span class="text-xs text-slate-500 font-mono">Mobile App</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100">Gilli Danda: Street Clash (PUBG UI/UX)</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Tactical esports-style HUD, angular dark glassmorphic lobby UI, dynamic landscape touch controls, and Flame physics integration.
+                        </p>
+                    </div>
+                    <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
+                        <span class="text-slate-400"><i class="fab fa-flutter text-blue-400 mr-1.5"></i>Flutter + Flame</span>
+                        <a href="https://github.com/flutterashu" target="_blank" class="text-blue-400 hover:underline">View Demo →</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 3 -->
+                <div class="port-item web glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20">Web Application</span>
+                            <span class="text-xs text-slate-500 font-mono">48h Sprint</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100">Kazon India Web Experience</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            High-performance responsive web experience built with React, Vite, Tailwind CSS, Lucide React, and Motion animations.
+                        </p>
+                    </div>
+                    <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
+                        <span class="text-slate-400"><i class="fab fa-react text-cyan-400 mr-1.5"></i>React + Vite</span>
+                        <a href="https://github.com/flutterashu/kazon-india" target="_blank" class="text-purple-400 hover:underline">View Repo →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Instant Quote Estimator -->
+        <section id="calculator" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-700/80 relative overflow-hidden shadow-2xl">
+                <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+                    <span class="px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-400 text-xs font-mono">INSTANT ESTIMATOR</span>
+                    <h2 class="text-3xl font-bold">Build Your Project Sprint</h2>
+                    <p class="text-slate-400 text-sm">Select options to see an estimated price and generate a pre-formatted WhatsApp message instantly.</p>
+                </div>
+
+                <!-- Currency Selector -->
+                <div class="flex justify-end mb-6">
+                    <div class="inline-flex items-center gap-2 p-1.5 bg-slate-950 rounded-xl border border-slate-800 text-xs font-mono">
+                        <span class="text-slate-400 pl-2">Currency:</span>
+                        <button onclick="setCurrency('USD')" id="curr-usd" class="px-2.5 py-1 rounded-lg bg-brand-500 text-slate-950 font-bold transition-all">$ USD</button>
+                        <button onclick="setCurrency('INR')" id="curr-inr" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-slate-200 transition-all">₹ INR</button>
+                        <button onclick="setCurrency('EUR')" id="curr-eur" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-slate-200 transition-all">€ EUR</button>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Calculator Inputs -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-mono text-slate-300 uppercase tracking-wider mb-2">1. Select Primary Need</label>
+                            <select id="calc-service" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-sm text-slate-100 focus:outline-none focus:border-brand-500 transition-colors">
+                                <option value="bug-fix" data-price="50">Web / Layout Bug Fix ($50)</option>
+                                <option value="script" data-price="85">Python / Gemini AI Script ($85)</option>
+                                <option value="video" data-price="65">Short-Form Video Batch (3 Clips) ($65)</option>
+                                <option value="full-app" data-price="180">Full Landing Page / Web App ($180)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono text-slate-300 uppercase tracking-wider mb-2">2. Delivery Speed</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button type="button" onclick="setSpeed('normal')" id="btn-speed-normal" class="speed-btn p-3 rounded-xl border border-brand-500 bg-brand-500/10 text-emerald-400 font-medium text-xs text-center transition-all">
+                                    Standard (48 Hours)
+                                </button>
+                                <button type="button" onclick="setSpeed('express')" id="btn-speed-express" class="speed-btn p-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-medium text-xs text-center transition-all">
+                                    Express (24 Hours) +$25
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono text-slate-300 uppercase tracking-wider mb-2">3. Additional Add-ons</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 p-3 bg-slate-900/60 rounded-xl border border-slate-800 text-xs cursor-pointer hover:border-slate-700">
+                                    <input type="checkbox" id="addon-video" onchange="calculateTotal()" class="rounded bg-slate-800 border-slate-700 text-brand-500 focus:ring-0">
+                                    <span>Loom Video Walkthrough & Explanation (+$15)</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-slate-900/60 rounded-xl border border-slate-800 text-xs cursor-pointer hover:border-slate-700">
+                                    <input type="checkbox" id="addon-docs" onchange="calculateTotal()" class="rounded bg-slate-800 border-slate-700 text-brand-500 focus:ring-0">
+                                    <span>Full Technical Setup Documentation (+$20)</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="p-6 bg-slate-950 rounded-2xl border border-slate-800 text-center space-y-4">
-                        <div class="text-3xl font-extrabold text-emerald-400 font-mono" id="calc-total">$50 / ₹4,000</div>
-                        <button onclick="sendWhatsAppEstimate()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg transition-all">
+                    <!-- Output Card -->
+                    <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 text-center space-y-6 flex flex-col justify-between h-full">
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Estimated Total</span>
+                            <div class="text-4xl sm:text-5xl font-extrabold text-emerald-400 font-mono" id="calc-total">
+                                $50
+                            </div>
+                            <div class="text-xs text-slate-400 font-mono" id="calc-time">Delivery: ~48 Hours</div>
+                        </div>
+
+                        <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800/80 text-left text-xs text-slate-300 space-y-1">
+                            <div class="font-semibold text-slate-200">Includes:</div>
+                            <ul class="space-y-1 text-slate-400">
+                                <li>• Direct WhatsApp updates during execution</li>
+                                <li>• Source code / asset ownership</li>
+                                <li>• Revisions until full resolution</li>
+                            </ul>
+                        </div>
+
+                        <button onclick="sendWhatsAppEstimate()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-4 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02]">
                             <i class="fab fa-whatsapp text-lg"></i>
                             <span>Send Estimate via WhatsApp</span>
                         </button>
@@ -325,23 +524,104 @@
                 </div>
             </div>
         </section>
+
+        <!-- Simple 3-Step Process -->
+        <section id="process" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-mono text-brand-500 tracking-wider uppercase font-semibold">How It Works</h2>
+                <p class="text-3xl font-bold">Zero Friction Process</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative">
+                    <div class="text-4xl font-extrabold text-brand-500/20 font-mono mb-4">01</div>
+                    <h3 class="text-lg font-bold mb-2">Send Requirements</h3>
+                    <p class="text-slate-400 text-sm">Send your task, broken link, or script requirement via WhatsApp or email. No long forms needed.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative">
+                    <div class="text-4xl font-extrabold text-blue-500/20 font-mono mb-4">02</div>
+                    <h3 class="text-lg font-bold mb-2">Receive Plan & Start</h3>
+                    <p class="text-slate-400 text-sm">Get a straightforward quote and time frame within 1 hour. Development begins immediately upon confirmation.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative">
+                    <div class="text-4xl font-extrabold text-purple-500/20 font-mono mb-4">03</div>
+                    <h3 class="text-lg font-bold mb-2">Review & Deliver</h3>
+                    <p class="text-slate-400 text-sm">Receive proof-of-concept video, code repository, or final video exports within 24 to 48 hours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section with Interactive Accordions -->
+        <section id="faq" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="glass-card rounded-xl border border-slate-800 overflow-hidden">
+                    <button onclick="toggleAccordion(1)" class="w-full p-6 text-left flex items-center justify-between font-semibold text-slate-200 hover:text-emerald-400 transition-colors">
+                        <span>What if my issue takes longer than 48 hours?</span>
+                        <i id="acc-icon-1" class="fas fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-content-1" class="accordion-content px-6 pb-6 text-slate-400 text-sm">
+                        If a project requires more time due to complex architecture, I provide a clear milestone roadmap before starting. You will never be surprised by unexpected delays or scope creep.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl border border-slate-800 overflow-hidden">
+                    <button onclick="toggleAccordion(2)" class="w-full p-6 text-left flex items-center justify-between font-semibold text-slate-200 hover:text-emerald-400 transition-colors">
+                        <span>How do payments work?</span>
+                        <i id="acc-icon-2" class="fas fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-content-2" class="accordion-content px-6 pb-6 text-slate-400 text-sm">
+                        For micro-sprints under $100, payment can be settled upon review/delivery. For larger custom projects, 50% upfront and 50% upon final delivery via UPI, Stripe, or PayPal.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl border border-slate-800 overflow-hidden">
+                    <button onclick="toggleAccordion(3)" class="w-full p-6 text-left flex items-center justify-between font-semibold text-slate-200 hover:text-emerald-400 transition-colors">
+                        <span>Can you work with custom codebases or existing repos?</span>
+                        <i id="acc-icon-3" class="fas fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-content-3" class="accordion-content px-6 pb-6 text-slate-400 text-sm">
+                        Yes, I frequently work with existing GitHub repos, Figma files, or API keys. Clear access instructions will be provided upon kick-off to protect your security.
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Floating WhatsApp CTA Button -->
+    <a href="https://wa.me/919667146563?text=Hi%20Ashish,%20I%20saw%20your%20landing%20page%20and%20want%20to%20discuss%20a%20project." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold p-4 rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 gradient-glow" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
     <!-- Footer -->
-    <footer class="glass-card border-t border-slate-800 py-8 relative z-10 text-center text-xs text-slate-400 font-mono">
-        © 2026 Ashish Maheshwari. All rights reserved.
+    <footer class="glass-card border-t border-slate-800 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="text-slate-400 text-xs font-mono">
+                © 2026 Ashish Maheshwari. All rights reserved.
+            </div>
+            <div class="flex items-center gap-6 text-slate-400 text-sm">
+                <a href="https://github.com/flutterashu" target="_blank" class="hover:text-slate-200 transition-colors" title="GitHub"><i class="fab fa-github text-lg"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-slate-200 transition-colors" title="LinkedIn"><i class="fab fa-linkedin text-lg"></i></a>
+                <a href="https://wa.me/919667146563" target="_blank" class="hover:text-slate-200 transition-colors" title="WhatsApp"><i class="fab fa-whatsapp text-lg"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Three.js & Script Initialization -->
+    <!-- Interactive Three.js & GSAP Scripts -->
     <script>
-        // Three.js Background Script
-        let scene, camera, renderer, particles;
+        // Three.js 3D Background Setup
+        let scene, camera, renderer, particles, meshGroup;
+        let mouseX = 0, mouseY = 0;
 
         function initThreeJS() {
             const canvas = document.getElementById('bg-canvas');
             if (!canvas) return;
 
             scene = new THREE.Scene();
+            
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
             camera.position.z = 30;
 
@@ -350,61 +630,241 @@
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
+                // Create Node Particle Grid
                 const geometry = new THREE.BufferGeometry();
-                const count = 250;
+                const count = 350;
                 const positions = new Float32Array(count * 3);
+                const colors = new Float32Array(count * 3);
 
                 for (let i = 0; i < count * 3; i += 3) {
                     positions[i] = (Math.random() - 0.5) * 80;
                     positions[i + 1] = (Math.random() - 0.5) * 80;
                     positions[i + 2] = (Math.random() - 0.5) * 80;
+
+                    colors[i] = 0.06;      // R (emerald hue)
+                    colors[i + 1] = 0.72;  // G
+                    colors[i + 2] = 0.5;   // B
                 }
 
                 geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-                const material = new THREE.PointsMaterial({ size: 0.7, color: 0x10b981, transparent: true, opacity: 0.5 });
+                geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+                const material = new THREE.PointsMaterial({
+                    size: 0.8,
+                    vertexColors: true,
+                    transparent: true,
+                    opacity: 0.6
+                });
+
                 particles = new THREE.Points(geometry, material);
                 scene.add(particles);
 
-                function animate() {
-                    requestAnimationFrame(animate);
-                    particles.rotation.y += 0.0006;
-                    particles.rotation.x += 0.0003;
-                    renderer.render(scene, camera);
-                }
-                animate();
+                // Floating Wireframe Orb
+                meshGroup = new THREE.Group();
+                const orbGeo = new THREE.IcosahedronGeometry(12, 2);
+                const orbMat = new THREE.MeshBasicMaterial({
+                    color: 0x10b981,
+                    wireframe: true,
+                    transparent: true,
+                    opacity: 0.12
+                });
+                const orb = new THREE.Mesh(orbGeo, orbMat);
+                meshGroup.add(orb);
+                meshGroup.position.set(25, -5, -10);
+                scene.add(meshGroup);
+
+                // Interaction Event Listeners
+                window.addEventListener('resize', onWindowResize);
+                document.addEventListener('mousemove', onDocumentMouseMove);
             } catch(e) {
-                console.warn("WebGL not supported or restricted:", e);
+                console.warn("WebGL renderer fallback active:", e);
             }
+        }
+
+        function onWindowResize() {
+            if (camera && renderer) {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+        }
+
+        function onDocumentMouseMove(event) {
+            mouseX = (event.clientX - window.innerWidth / 2) * 0.0005;
+            mouseY = (event.clientY - window.innerHeight / 2) * 0.0005;
+        }
+
+        function animateThree() {
+            if (!renderer) return;
+            requestAnimationFrame(animateThree);
+
+            if (particles) {
+                particles.rotation.y += 0.0008;
+                particles.rotation.x += 0.0004;
+            }
+
+            if (meshGroup) {
+                meshGroup.rotation.y += 0.003;
+                meshGroup.rotation.x += 0.002;
+            }
+
+            camera.position.x += (mouseX * 20 - camera.position.x) * 0.05;
+            camera.position.y += (-mouseY * 20 - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        // GSAP Scroll Animations
+        function initGSAP() {
+            if (typeof gsap === 'undefined') return;
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from('.hero-text > *', {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                stagger: 0.15,
+                ease: 'power3.out'
+            });
+
+            gsap.from('#services .glass-card', {
+                scrollTrigger: {
+                    trigger: '#services',
+                    start: 'top 80%'
+                },
+                opacity: 0,
+                y: 40,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: 'power2.out'
+            });
+        }
+
+        // Accordion Toggle
+        function toggleAccordion(id) {
+            const content = document.getElementById(`acc-content-${id}`);
+            const icon = document.getElementById(`acc-icon-${id}`);
+
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
+                content.classList.remove('open');
+                icon.style.transform = "rotate(0deg)";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.classList.add('open');
+                icon.style.transform = "rotate(180deg)";
+            }
+        }
+
+        // Portfolio Filter
+        function filterPortfolio(category) {
+            const tabs = document.querySelectorAll('.port-tab');
+            const items = document.querySelectorAll('.port-item');
+
+            tabs.forEach(tab => {
+                tab.className = "port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all";
+            });
+            event.target.className = "port-tab active px-4 py-2 rounded-xl glass-card border border-brand-500 text-emerald-400 font-semibold transition-all";
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Currency Switcher & Estimator
+        let currentCurrency = 'USD';
+        let speedMultiplier = 0;
+        let speedText = "48 Hours";
+
+        function setCurrency(curr) {
+            currentCurrency = curr;
+            const usdBtn = document.getElementById('curr-usd');
+            const inrBtn = document.getElementById('curr-inr');
+            const eurBtn = document.getElementById('curr-eur');
+
+            usdBtn.className = "px-2.5 py-1 rounded-lg text-slate-400 hover:text-slate-200 transition-all";
+            inrBtn.className = "px-2.5 py-1 rounded-lg text-slate-400 hover:text-slate-200 transition-all";
+            eurBtn.className = "px-2.5 py-1 rounded-lg text-slate-400 hover:text-slate-200 transition-all";
+
+            if (curr === 'USD') usdBtn.className = "px-2.5 py-1 rounded-lg bg-brand-500 text-slate-950 font-bold transition-all";
+            if (curr === 'INR') inrBtn.className = "px-2.5 py-1 rounded-lg bg-brand-500 text-slate-950 font-bold transition-all";
+            if (curr === 'EUR') eurBtn.className = "px-2.5 py-1 rounded-lg bg-brand-500 text-slate-950 font-bold transition-all";
+
+            calculateTotal();
+        }
+
+        function setSpeed(type) {
+            const btnNormal = document.getElementById('btn-speed-normal');
+            const btnExpress = document.getElementById('btn-speed-express');
+
+            if (type === 'express') {
+                speedMultiplier = 25;
+                speedText = "24 Hours";
+                btnExpress.className = "speed-btn p-3 rounded-xl border border-brand-500 bg-brand-500/10 text-emerald-400 font-medium text-xs text-center transition-all";
+                btnNormal.className = "speed-btn p-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-medium text-xs text-center transition-all";
+            } else {
+                speedMultiplier = 0;
+                speedText = "48 Hours";
+                btnNormal.className = "speed-btn p-3 rounded-xl border border-brand-500 bg-brand-500/10 text-emerald-400 font-medium text-xs text-center transition-all";
+                btnExpress.className = "speed-btn p-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-medium text-xs text-center transition-all";
+            }
+            calculateTotal();
         }
 
         function calculateTotal() {
             const select = document.getElementById('calc-service');
-            if (!select) return;
-            const basePrice = parseInt(select.value);
-            const totalINR = basePrice * 80;
-            document.getElementById('calc-total').innerText = `$${basePrice} / ₹${totalINR.toLocaleString()}`;
+            const basePrice = parseInt(select.options[select.selectedIndex].getAttribute('data-price'));
+            
+            const expressFee = speedMultiplier;
+            const videoAddon = document.getElementById('addon-video').checked ? 15 : 0;
+            const docsAddon = document.getElementById('addon-docs').checked ? 20 : 0;
+
+            const totalUSD = basePrice + expressFee + videoAddon + docsAddon;
+
+            let formattedTotal = `$${totalUSD}`;
+            if (currentCurrency === 'INR') {
+                formattedTotal = `₹${(totalUSD * 80).toLocaleString('en-IN')}`;
+            } else if (currentCurrency === 'EUR') {
+                formattedTotal = `€${Math.round(totalUSD * 0.92)}`;
+            }
+
+            document.getElementById('calc-total').innerText = formattedTotal;
+            document.getElementById('calc-time').innerText = `Delivery: ~${speedText}`;
+        }
+
+        function quickQuote(serviceName) {
+            const select = document.getElementById('calc-service');
+            if (serviceName.includes('AI')) select.value = 'script';
+            else if (serviceName.includes('Web')) select.value = 'bug-fix';
+            else if (serviceName.includes('Video')) select.value = 'video';
+            
+            calculateTotal();
+            document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' });
         }
 
         function sendWhatsAppEstimate() {
             const select = document.getElementById('calc-service');
-            const serviceText = select.options[select.selectedIndex].text;
-            const message = `Hi Ashish! I calculated a quote on your website for: ${serviceText}. Can we discuss starting this?`;
-            window.open(`https://wa.me/919667146563?text=${encodeURIComponent(message)}`, '_blank');
+            const serviceText = select.options[select.selectedIndex].text.split(' (')[0];
+            const totalText = document.getElementById('calc-total').innerText;
+            
+            const message = `Hi Ashish! I generated a quote on your site:%0A%0A• Service: ${serviceText}%0A• Speed: ${speedText}%0A• Estimated Cost: ${totalText}%0A%0AWhen can we kick this off?`;
+            
+            window.open(`https://wa.me/919667146563?text=${message}`, '_blank');
         }
 
-        window.addEventListener('DOMContentLoaded', () => {
+        // Initialize on load
+        window.onload = function() {
             initThreeJS();
+            animateThree();
+            initGSAP();
             calculateTotal();
             document.getElementById('calc-service').addEventListener('change', calculateTotal);
-            
-            window.addEventListener('resize', () => {
-                if (camera && renderer) {
-                    camera.aspect = window.innerWidth / window.innerHeight;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(window.innerWidth, window.innerHeight);
-                }
-            });
-        });
+        };
     </script>
 </body>
 </html>
