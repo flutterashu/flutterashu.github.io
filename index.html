@@ -365,79 +365,122 @@
             </div>
         </section>
 
+        <!-- Featured Work & Case Studies -->
+<section id="portfolio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <h2 class="text-xs font-mono text-brand-500 tracking-wider uppercase font-semibold">Featured Work & Case Studies</h2>
+        <p class="text-3xl font-extrabold">Recent Sprint Successes</p>
+        <p class="text-slate-400 text-sm">Explore web applications, e-commerce platforms, AI tools, and specialized D2C digital storefronts.</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="flex justify-center flex-wrap gap-3 mb-10 text-xs font-mono">
+        <button onclick="filterPortfolio('all')" class="port-tab active px-4 py-2 rounded-xl glass-card border border-brand-500 text-emerald-400 font-semibold transition-all">All Projects</button>
+        <button onclick="filterPortfolio('ecommerce')" class="port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all">E-Commerce & D2C</button>
+        <button onclick="filterPortfolio('tool')" class="port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all">Web Tools & Utilities</button>
+        <button onclick="filterPortfolio('ai')" class="port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all">AI & Interactive</button>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1: AutoSub Link Generator -->
+        <div class="port-item tool glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
+            <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">Web Utility</span>
+                    <span class="text-xs text-slate-500 font-mono">Open Source</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">AutoSub Link Generator</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Lightweight web app that instantly generates YouTube auto-subscription links (`?sub_confirmation=1`) to boost audience growth and subscriber conversion rates.
+                </p>
+            </div>
+            <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
+                <span class="text-slate-400"><i class="fab fa-js text-yellow-400 mr-1.5"></i>JavaScript + HTML</span>
+                <div class="flex items-center gap-3">
+                    <a href="https://github.com/flutterashu/autosub-link-generator" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    <a href="https://flutterashu.github.io/autosub-link-generator/" target="_blank" class="text-brand-400 hover:underline">Live App →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2: PujaPoint.in -->
+        <div class="port-item ecommerce glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
+            <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">Devotional E-Commerce</span>
+                    <span class="text-xs text-slate-500 font-mono">Live Platform</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">PujaPoint.in</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Devotional e-commerce platform featuring instant customized kit builders and localized daily/monthly flower subscriptions for ritual purity and authentic puja samagri.
+                </p>
+            </div>
+            <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
+                <span class="text-slate-400"><i class="fas fa-store text-emerald-400 mr-1.5"></i>Render + Full Stack</span>
+                <a href="https://pujapoint.onrender.com" target="_blank" class="text-blue-400 hover:underline">Visit Site →</a>
+            </div>
+        </div>
+
+        <!-- Project 3: Demi-Fine Jewelry Storefront -->
+        <div class="port-item ecommerce ai glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
+            <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20">D2C Fashion & AI</span>
+                    <span class="text-xs text-slate-500 font-mono">Interactive UI</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">Demi-Fine Jewelry Storefront</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Anti-tarnish 18K gold-plated fashion storefront with an interactive ring size finder, necklace drape visualizer, and Aura AI personal stylist integration.
+                </p>
+            </div>
+            <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
+                <span class="text-slate-400"><i class="fas fa-[#a855f7] fa-gem text-purple-400 mr-1.5"></i>React + Canvas AI</span>
+                <a href="#calculator" onclick="quickQuote('Jewelry Storefront')" class="text-purple-400 hover:underline">Request Specs →</a>
+            </div>
+        </div>
+
+        <!-- Project 4: Organic Spices & Farm-Fresh Masalas -->
+        <div class="port-item ecommerce glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
+            <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">Organic Grocery D2C</span>
+                    <span class="text-xs text-slate-500 font-mono">Farm Direct</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">Farm-Fresh Organic Spices</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    D2C store for 100% chemical-free whole spices, stone-ground masalas, traditional chutney podis, and medicinal herbs delivered straight from farm to home.
+                </p>
+            </div>
+            <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
+                <span class="text-slate-400"><i class="fas fa-leaf text-amber-400 mr-1.5"></i>High-CTR Conversion UI</span>
+                <a href="#calculator" onclick="quickQuote('Organic Spices Store')" class="text-amber-400 hover:underline">Build Similar →</a>
+            </div>
+        </div>
+
+        <!-- Project 5: TrueSkin Leather Storefront -->
+        <div class="port-item ecommerce glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
+            <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-orange-400 bg-orange-500/10 px-2.5 py-1 rounded-md border border-orange-500/20">Luxury Leather Goods</span>
+                    <span class="text-xs text-slate-500 font-mono">Tannery Direct</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">TrueSkin Leather Storefront</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Exclusive showcase for 100% genuine sheep nappa leather goods: executive desk folios, featherlight RFID briefcases, anti-theft commuters, and 0.4mm skived wallets.
+                </p>
+            </div>
+            <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
+                <span class="text-slate-400"><i class="fas fa-briefcase text-orange-400 mr-1.5"></i>Luxury E-Commerce UI</span>
+                <a href="#calculator" onclick="quickQuote('TrueSkin Leather')" class="text-orange-400 hover:underline">Request Specs →</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
         <!-- Featured Portfolio & Work Showcase -->
-        <section id="portfolio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                <h2 class="text-xs font-mono text-brand-500 tracking-wider uppercase font-semibold">Featured Work & Case Studies</h2>
-                <p class="text-3xl font-extrabold">Recent Sprint Successes</p>
-                <p class="text-slate-400 text-sm">Explore interactive web projects, mobile games, and AI automation engines delivered for clients.</p>
-            </div>
-
-            <!-- Filter Tabs -->
-            <div class="flex justify-center flex-wrap gap-3 mb-10 text-xs font-mono">
-                <button onclick="filterPortfolio('all')" class="port-tab active px-4 py-2 rounded-xl glass-card border border-brand-500 text-emerald-400 font-semibold transition-all">All Projects</button>
-                <button onclick="filterPortfolio('ai')" class="port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all">AI & Python</button>
-                <button onclick="filterPortfolio('game')" class="port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all">Flutter & Mobile</button>
-                <button onclick="filterPortfolio('web')" class="port-tab px-4 py-2 rounded-xl glass-card border border-slate-800 text-slate-400 hover:text-slate-200 transition-all">Web Sprints</button>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Portfolio Card 1 -->
-                <div class="port-item ai glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">Gemini AI / Python</span>
-                            <span class="text-xs text-slate-500 font-mono">24h Sprint</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-100">Automated Shorts Topic & Metadata Generator</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            Python automation pipeline querying the Gemini API to analyze educational trends, auto-generate titles, descriptions, and 9:16 thumbnail specs.
-                        </p>
-                    </div>
-                    <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
-                        <span class="text-slate-400"><i class="fab fa-python text-yellow-400 mr-1.5"></i>Python + Gemini API</span>
-                        <a href="https://github.com/flutterashu" target="_blank" class="text-brand-400 hover:underline">View Code →</a>
-                    </div>
-                </div>
-
-                <!-- Portfolio Card 2 -->
-                <div class="port-item game glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">Flutter Game Engine</span>
-                            <span class="text-xs text-slate-500 font-mono">Mobile App</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-100">Gilli Danda: Street Clash (PUBG UI/UX)</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            Tactical esports-style HUD, angular dark glassmorphic lobby UI, dynamic landscape touch controls, and Flame physics integration.
-                        </p>
-                    </div>
-                    <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
-                        <span class="text-slate-400"><i class="fab fa-flutter text-blue-400 mr-1.5"></i>Flutter + Flame</span>
-                        <a href="https://github.com/flutterashu" target="_blank" class="text-blue-400 hover:underline">View Demo →</a>
-                    </div>
-                </div>
-
-                <!-- Portfolio Card 3 -->
-                <div class="port-item web glass-card glass-card-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-mono text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20">Web Application</span>
-                            <span class="text-xs text-slate-500 font-mono">48h Sprint</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-100">Kazon India Web Experience</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">
-                            High-performance responsive web experience built with React, Vite, Tailwind CSS, Lucide React, and Motion animations.
-                        </p>
-                    </div>
-                    <div class="p-6 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between text-xs font-mono">
-                        <span class="text-slate-400"><i class="fab fa-react text-cyan-400 mr-1.5"></i>React + Vite</span>
-                        <a href="https://github.com/flutterashu/kazon-india" target="_blank" class="text-purple-400 hover:underline">View Repo →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
         <!-- Interactive Instant Quote Estimator -->
         <section id="calculator" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-700/80 relative overflow-hidden shadow-2xl">
